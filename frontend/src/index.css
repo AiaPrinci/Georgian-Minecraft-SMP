@@ -1,5 +1,34 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: MinecraftCaps;
+  src: url('./assets/fonts/MinecraftTen-VGORe.ttf');
+}
+
+@font-face {
+  font-family: MinecraftGeorgian;
+  src: url('./assets/fonts/mg-minecraft-georgian-regular.ttf');
+}
+
+@font-face {
+  font-family: Minecraft;
+  src: url('./assets/fonts/Minecraftchmc.ttf');
+}
+
+@font-face {
+  font-family: NotoSans;
+  src: url('./assets/fonts/NotoSans-Regular.ttf');
+}
+
+:root {
+  --bg-color: #0F0E0E;
+  --header: #F3F3EE;
+  --text : #fefef0c5;
+  --MinecraftCaps: MinecraftCaps;
+  --MinecraftGeo: MinecraftGeorgian;
+  --MinecraftFont: Minecraft;
+  --font: NotoSans;
+}
+
+::selection {
+  background-color: #75A403;
+  color: var(--header);
 }

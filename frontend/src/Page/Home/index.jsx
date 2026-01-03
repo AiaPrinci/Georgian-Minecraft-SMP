@@ -1,8 +1,12 @@
+import './style.css';
+import { HomeHeader } from './HomeHeader';
+
 const Home = () => {
+  
     return (
-        <>
-            <h1>Home</h1>
-        </>
+        <div className='Home'>
+            <HomeHeader />
+        </div>
     )
 };
 
