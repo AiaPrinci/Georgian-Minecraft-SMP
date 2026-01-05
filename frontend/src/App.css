@@ -11,3 +11,15 @@ body {
 a {
   text-decoration: none;
 }
+
+.btn {
+  color: var(--heading);
+  font-family: var(--font);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .1s;
+}
+.btn:hover {
+  opacity: 0.8;
+}

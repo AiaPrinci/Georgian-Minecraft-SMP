@@ -1,5 +1,14 @@
 .Home {
     width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     height: auto;
-    padding-top: 45px;
+    padding-top: 65px;
+}
+
+@media only screen and (max-width: 1261px) {
+    .Home {
+        padding: 20px;
+        padding-top: 65px;
+    }
 }

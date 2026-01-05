@@ -18,17 +18,26 @@
   src: url('./assets/fonts/NotoSans-Regular.ttf');
 }
 
+@font-face {
+  font-family: FontGeo;
+  src: url('./assets/fonts/bpg_nino_mtavruli_normal.ttf');
+}
+
 :root {
-  --bg-color: #0F0E0E;
-  --header: #F3F3EE;
+  --bg-color: #0b1320;
+  --heading: #F3F3EE;
   --text : #fefef0c5;
+  --border-color: #f3f3ee3f;
   --MinecraftCaps: MinecraftCaps;
   --MinecraftGeo: MinecraftGeorgian;
   --MinecraftFont: Minecraft;
   --font: NotoSans;
+  --fontGeo: FontGeo;
+  --green: #75A403;
+  --shining-green: #7db300;
 }
 
 ::selection {
-  background-color: #75A403;
+  background-color: var(--green);
   color: var(--header);
 }
