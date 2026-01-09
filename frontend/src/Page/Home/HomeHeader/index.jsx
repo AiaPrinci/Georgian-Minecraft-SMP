@@ -4,6 +4,7 @@ import HeadingText from './HomeHeader.json';
 import object from '../../../assets/images/MinecraftObject.svg';
 import polygon from '../../../assets/svgs/polygon.svg';
 import play from '../../../assets/svgs/play.svg';
+import MinecraftRoom from '../../../assets/images/pc-desk-steve-figure.svg';
 
 export const HomeHeader = () => {
     const ip = "georgianchronicles.com";
@@ -97,8 +98,7 @@ export const HomeHeader = () => {
                     </div>
                 </div>
                 <div className='video_container'>
-                    <img className='video_polygon' src={polygon} alt="polygon" />
-                    <img className='play_btn' src={play} alt="play_btn" />
+                    <div><object type="image/svg+xml" data={MinecraftRoom} width="100%" title="MINECRAFT SERVER HOSTING" alt="PC desk with a steve figure"></object></div>
                 </div>
             </div>
         </div>
