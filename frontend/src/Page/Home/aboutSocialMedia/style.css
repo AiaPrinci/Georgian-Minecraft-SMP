@@ -1,0 +1,58 @@
+.AboutSocialMedia {
+    width: 100%;
+    height: auto;
+}
+.AboutSocialMedia_container {
+    width: 100%;
+    max-width: 1260px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.AboutSocialMedia_heading {
+    font-size: 36px;
+    color: var(--heading);
+    font-family: var(--MinecraftGeo);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.AboutSocialMedia_inner {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.AboutSocialMedia_text_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.AboutSocialMedia_text {
+    width: 100%;
+    font-family: var(--fontGeo);
+    color: var(--text);
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.AboutSocialMedia_logo {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1026px) {
+    .AboutSocialMedia_container {
+        padding: 20px 10px;
+    }
+    .AboutSocialMedia_heading {
+        font-size: 22px;
+    }
+    .AboutSocialMedia_inner {
+        flex-direction: column;
+    }
+}

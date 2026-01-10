@@ -31,7 +31,7 @@
     font-family: var(--MinecraftFont);
 }
 .line {
-    width: 200px;
+    width: 100px;
     height: 10px;
     background-color: var(--shining-green);
 }
