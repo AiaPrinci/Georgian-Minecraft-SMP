@@ -1,13 +1,12 @@
 import './style.css';
 import { HomeHeader } from './HomeHeader';
-import { Slogan } from './slogan';
+import { HowLSWorks } from './description';
 
 const Home = () => {
-  
     return (
         <div className='Home'>
             <HomeHeader />
-            <Slogan />
+            <HowLSWorks />
         </div>
     )
 };

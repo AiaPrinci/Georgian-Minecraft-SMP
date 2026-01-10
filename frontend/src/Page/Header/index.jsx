@@ -1,5 +1,6 @@
 import './style.css';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logoBGnone.png';
 
 const Header = () => {
 
@@ -13,7 +14,7 @@ const Header = () => {
     return (
         <header>
             <div className='header'>
-                <p className='header_heading'>Georgian Chronicles</p>
+                <p className='header_heading'>Georgian <img className='header_logo' src={logo} alt="" /> Chronicles</p>
                 <div className='header_list'>
                     {headerList.map(item => (
                         <Link to={item.link}>
