@@ -39,5 +39,5 @@
 
 ::selection {
   background-color: var(--green);
-  color: var(--header);
+  color: var(--heading);
 }
