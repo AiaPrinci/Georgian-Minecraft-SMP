@@ -26,17 +26,17 @@ export const HomeHeader = () => {
                         <h1 className='heading'>{HeadingText.heading}</h1>
                         <p className='heading_description'>{HeadingText.headingDescription}</p>
                         <p className='heading_description_res'>{HeadingText.headingResDescription}</p>
-                    </div>
-                    <div className='server_ip_container'>
-                        <p className='server_ip'>{ip}</p>
-                        <div className='home_header_server_join_btn' onClick={copy}>
-                            {copyBtn}
+                        <div className='server_ip_container'>
+                            <p className='server_ip'>{ip}</p>
+                            <div className='home_header_server_join_btn' onClick={copy}>
+                                {copyBtn}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='home_header_image_container'>
-                    <div className='home_header_image'>
-                        <object type="image/svg+xml" data={MinecraftRoom} width="100%" title="MINECRAFT SERVER HOSTING" alt="PC desk with a steve figure"></object>
+                    <div className='home_header_image_container'>
+                        <div className='home_header_image'>
+                            <object type="image/svg+xml" data={MinecraftRoom} width="100%" title="MINECRAFT SERVER HOSTING" alt="PC desk with a steve figure"></object>
+                        </div>
                     </div>
                 </div>
             </div>

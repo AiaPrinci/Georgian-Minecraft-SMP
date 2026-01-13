@@ -4,25 +4,41 @@
     position: relative;
 }
 
+.object {
+    width: 200px;
+    left: 0;
+    position: fixed;
+}
+
 .Home_Header_inner {
     width: 100%;
     max-width: 1260px;
     margin: 0 auto;
     height: 100%;
     display: flex;
-    padding: 50px 20px;
-    border-radius: 10px;
     /* border: 1px solid var(--border-color); */
     align-items: center;
     gap: 20px;
     /* box-shadow: 5px 5px 10px #0000002c; */
+    background-image: url('../../../assets/images/minecraft1-6-4-1920x1080-png2-1.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
 }
 
 .home_header {
     width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 20px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    -moz-backdrop-filter: blur(8px);
+    padding: 50px 20px;
+    border-radius: 10px;
 }
 
 .home_header_text_container {
@@ -42,6 +58,7 @@
     font-size: 22px;
     color: var(--text);
     font-family: var(--MinecraftFont);
+    text-shadow: 2px 2px 5px #000;
 }
 .heading_description {
     font-size: 20px;
@@ -49,6 +66,7 @@
     font-family: var(--fontGeo);
     font-weight: bold;
     width: 700px;
+    text-shadow: 2px 2px 5px #000;
 }
 .heading_description_res {
     font-size: 20px;
@@ -57,6 +75,7 @@
     font-weight: bold;
     width: 700px;
     display: none;
+    text-shadow: 2px 2px 5px #000;
 }
 
 .home_header_btn_container {
@@ -99,11 +118,15 @@
 
 .home_header_image {
     width: 100%;
+    filter: drop-shadow(5px 50px 10px #00000062);
 }
 
 @media only screen and (max-width: 1026px) {
     .Home_Header_inner {
-        padding: 20px;
+        border-radius: 0px;
+    }
+    .home_header {
+        border-radius: 0;
     }
     .heading {
         font-size: 40px;
@@ -123,13 +146,11 @@
 }
 
 @media only screen and (max-width: 769px) {
-    .Home_Header_inner {
+    .home_header {
+        align-items: center;
         flex-direction: column;
         padding: 0;
         padding-top: 20px;
-    }
-    .home_header {
-        align-items: center;
     }
     .home_header_text_container {
         align-items: center;
