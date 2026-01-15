@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/images/regbg.svg');
+    background-image: url('../../../assets/images/regbg.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -53,9 +53,15 @@
     color: var(--text);
 }
 
+.reg_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .reg_btn {
     width: 100%;
-    background-color: #0e4e83;
+    background-color: var(--green);
     padding: 8px 16px;
     display: flex;
     justify-content: center;
@@ -67,7 +73,7 @@
     transition: all .2s;
 }
 .reg_btn:hover {
-    background-color: #115ea3;
+    background-color: var(--shining-green);
 }
 
 .signup_footer {
@@ -80,7 +86,7 @@
     gap: 10px;
 }
 .signup_footer span {
-    color: #115ea3;
+    color: var(--green);
     cursor: pointer;
 }
 .signup_footer span:hover {

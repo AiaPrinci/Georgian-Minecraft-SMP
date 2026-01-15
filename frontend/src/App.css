@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+}
+
 .btn {
   color: var(--heading);
   font-family: var(--font);
