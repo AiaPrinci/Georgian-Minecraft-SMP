@@ -19,6 +19,7 @@ const SignUp = () => {
 
             console.log(response.data);
             alert('Registration successful!');
+            alert('please login to continue');
         } catch (error) {
             if (error.response) {
                 console.log(error.response.data);
@@ -63,7 +64,7 @@ const SignUp = () => {
                         value={regData.password}
                         onChange={(e) => setRegData({...regData, password: e.target.value})}
                     />
-                    <button className='reg_btn'>Next</button>
+                    <button className='reg_btn'>Register</button>
                 </form>
                 <p className='signup_footer'>უკვე გაქვს ანგარიში? <Link to="/login"><span>Log In</span></Link></p>
             </div>
