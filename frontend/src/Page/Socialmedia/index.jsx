@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import './style.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Posts } from './Posts';
+import { Link } from 'react-router-dom';
 
 const Social = () => {
-    const [authStatus, setAuthStatus] = useState(null);
+    const [authStatus, setAuthStatus] = useState({});
     const navigate = useNavigate();
 
     const [post, setPost] = useState({
@@ -27,8 +29,7 @@ const Social = () => {
                     return;
                 }
 
-                setAuthStatus(res.data.user.username);
-
+                setAuthStatus(res.data.user);
             } catch (error) {
                 console.error('Error fetching auth status:', error);
             }
@@ -37,80 +38,19 @@ const Social = () => {
         fetchAuthStatus();
     }, [navigate]);
 
-    const handlePostUpload = async (e) => {
-        e.preventDefault();
 
-        try {
-            const res = await axios.post(
-                'http://localhost:5000/posts',
-                post,
-                { withCredentials: true }
-            );
-
-            console.log(res.data);
-            alert("Post uploaded!");
-
-            setPost({ title: '', content: '' });
-        } catch (error) {
-            console.error("Error uploading post:", error);
-        }
-    };
-
-    useEffect(() => {
-        const fetchPosts = async () => {
-
-            try {
-                const posts = await axios.get(
-                    'http://localhost:5000/posts',
-                    { withCredentials: true }
-                );
-
-                console.log(posts.data);
-                setPosts(posts.data);
-            } catch (error) {
-                console.error("Error uploading post:", error);
-            }
-        };
-        fetchPosts();
-    }, []);
 
     return (
         <div className="Social">
             <div className="Social_about"></div>
 
-            <div className="Posts">
-                <form onSubmit={handlePostUpload}>
-                    <input
-                        type="text"
-                        placeholder="Title"
-                        value={post.title}
-                        onChange={(e) =>
-                            setPost({ ...post, title: e.target.value })
-                        }
-                    />
-                    <input
-                        type="text"
-                        placeholder="Content"
-                        value={post.content}
-                        onChange={(e) =>
-                            setPost({ ...post, content: e.target.value })
-                        }
-                    />
-                    <button type="submit">Post</button>
-                </form>
-                <div className='posts'>
-                    {posts.map(post => (
-                        <div className='post'>
-                            <p>{post.author.username}</p>
-                            <p>{post.title}</p>
-                            <p>{post.content}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <Posts />
 
             <div className="Social_profile">
-                <p>{authStatus}</p>
+                <Link to={`/users/${authStatus.id}`}>
+                    <img src={`http://localhost:5000/static/uploads/${authStatus.profile_image}`} width="64px"  alt="" />
+                    <p>{authStatus.username}</p>
+                </Link>
             </div>
         </div>
     );

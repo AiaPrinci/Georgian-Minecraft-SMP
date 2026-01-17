@@ -21,6 +21,7 @@ const LogIn = () => {
             console.log('Auth status:', statusResponse.data);
             if (statusResponse.data.logged_in) {
                 navigate('/social');
+                localStorage.setItem("userId", statusResponse.data.user.id);
             }
 
             if (statusResponse.data.logged_in) {
